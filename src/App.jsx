@@ -1,7 +1,13 @@
+import NavBar from "./components/NavBar";
+import ItemListContainer from "./components/ItemListContainer";
+
 function App() {
     return (
         <>
-            <h1>App</h1>
+            <NavBar />
+            <main className="container mx-auto px-4 py-4">
+                <ItemListContainer mensaje="Explora nuestro catalogo" />
+            </main>
         </>
     );
 }
