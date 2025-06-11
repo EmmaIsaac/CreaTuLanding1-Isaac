@@ -10,9 +10,7 @@ function ItemListContainer() {
     useEffect(() => {
         const getProducts = () =>
             new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    resolve(wines); // Carga todos los vinos
-                }, 2000);
+                resolve(wines); // Carga todos los vinos
             });
 
         getProducts()
