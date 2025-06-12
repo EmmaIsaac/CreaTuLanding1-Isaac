@@ -2,10 +2,7 @@ import { Link } from "react-router";
 
 function item({ item }) {
     return (
-        <div
-            key={item.id}
-            className="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden flex flex-col"
-        >
+        <>
             <img
                 src={item.image}
                 alt={item.name}
@@ -27,7 +24,7 @@ function item({ item }) {
                     </Link>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 
