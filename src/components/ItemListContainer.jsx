@@ -37,7 +37,21 @@ function ItemListContainer() {
         );
     }
 
-    return <ItemList items={items} />;
+    return (
+        <>
+            {categoryName ? (
+                <h1 className="text-3xl text-gray-600 font-bold text-center my-4">
+                    Selección vino {categoryName}
+                </h1>
+            ) : (
+                <h1 className="text-3xl text-gray-600 font-bold text-center my-4">
+                    Nuestro Catálogo de Vinos
+                </h1>
+            )}
+
+            <ItemList items={items} />
+        </>
+    );
 }
 
 export default ItemListContainer;
