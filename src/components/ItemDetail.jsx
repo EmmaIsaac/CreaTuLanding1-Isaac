@@ -1,3 +1,5 @@
+import ItemCount from "./ItemCount";
+
 function ItemDetail({ item }) {
     if (!item) {
         return (
@@ -52,6 +54,7 @@ function ItemDetail({ item }) {
                     "No hay imagen disponible"
                 )}
             </div>
+            <ItemCount precio={item.price} />
         </div>
     );
 }

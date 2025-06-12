@@ -1,0 +1,40 @@
+import { useState } from "react";
+
+const ItemCount = ({ precio }) => {
+    const [count, setCount] = useState(0);
+
+    const increment = () => setCount(count + 1);
+    const decrement = () => {
+        if (count > 0) setCount(count - 1);
+    };
+
+    const total = count * precio;
+
+    return (
+        <div className="flex flex-col items-center gap-4 p-4 border border-gray-200 rounded-2xl shadow-sm w-full max-w-xs">
+            <div className="flex items-center gap-4">
+                <button
+                    onClick={decrement}
+                    className="px-4 py-2 bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200 transition"
+                >
+                    -
+                </button>
+                <span className="text-xl font-semibold">{count}</span>
+                <button
+                    onClick={increment}
+                    className="px-4 py-2 bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200 transition"
+                >
+                    +
+                </button>
+            </div>
+            <p className="text-gray-700 font-semibold">
+                Total:{" "}
+                <span className="text-red-900 font-semibold">
+                    ${total.toFixed(2)}
+                </span>
+            </p>
+        </div>
+    );
+};
+
+export default ItemCount;
