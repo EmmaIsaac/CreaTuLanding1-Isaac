@@ -10,6 +10,16 @@ const ItemCount = ({ precio }) => {
 
     const total = count * precio;
 
+    const handleAddToCart = () => {
+        if (count > 0) {
+            console.log(
+                `Agregado al carrito: ${count} unidades a $ ${precio} c/a. Total: $ ${total.toFixed(
+                    2
+                )}`
+            );
+        }
+    };
+
     return (
         <div className="flex flex-col items-center gap-4 p-4 border border-gray-200 rounded-2xl shadow-sm w-full max-w-xs">
             <div className="flex items-center gap-4">
@@ -33,6 +43,16 @@ const ItemCount = ({ precio }) => {
                     ${total.toFixed(2)}
                 </span>
             </p>
+            <button
+                type="button"
+                onClick={handleAddToCart}
+                disabled={count === 0}
+                className="px-6 py-3 bg-red-900 text-white rounded-2xl transition 
+             hover:bg-gray-700 
+             disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed"
+            >
+                Agregar al carrito
+            </button>
         </div>
     );
 };

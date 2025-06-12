@@ -1,12 +1,22 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import ItemDetail from "./ItemDetail";
+import NotFound from "./NotFound";
 import wines from "../winesData";
 
 function ItemDetailContainer() {
     const [item, setItem] = useState();
-
     const { itemId } = useParams();
+
+    // Validate itemId
+    const isItemIdValid =
+        itemId &&
+        !isNaN(itemId) &&
+        wines.some((wine) => wine.id === Number(itemId));
+
+    if (!isItemIdValid) {
+        return <NotFound />;
+    }
 
     useEffect(() => {
         const getProducts = () =>

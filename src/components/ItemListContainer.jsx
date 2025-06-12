@@ -1,18 +1,27 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import ItemList from "./ItemList";
+import NotFound from "./NotFound";
 import wines from "../winesData";
 
 function ItemListContainer() {
     const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(true);
     const { categoryName } = useParams();
 
+    const uniqueCategories = [...new Set(wines.map((wine) => wine.category))];
+
+    const isCategoryValid =
+        !categoryName || uniqueCategories.includes(categoryName.toLowerCase());
+
     useEffect(() => {
+        setLoading(true);
+
         const getProducts = () =>
-            new Promise((resolve, reject) => {
+            new Promise((resolve) => {
                 setTimeout(() => {
-                    resolve(wines); // Carga todos los vinos
-                }, 1000); // Simula un retraso de 1 segundo
+                    resolve(wines);
+                }, 1000);
             });
 
         getProducts()
@@ -26,12 +35,14 @@ function ItemListContainer() {
                     setItems(data);
                 }
             })
-            .catch((error) => {
-                console.error(error);
-            });
-    }, [categoryName]); // Se vuelve a ejecutar si cambia la categoría
+            .finally(() => setLoading(false));
+    }, [categoryName]);
 
-    if (items.length === 0) {
+    if (!isCategoryValid) {
+        return <NotFound />;
+    }
+
+    if (loading) {
         return (
             <div className="flex items-center justify-center h-screen">
                 <p className="text-gray-600">Cargando productos...</p>
@@ -50,7 +61,6 @@ function ItemListContainer() {
                     Nuestro Catálogo de Vinos
                 </h1>
             )}
-
             <ItemList items={items} />
         </>
     );

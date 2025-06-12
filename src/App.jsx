@@ -2,6 +2,7 @@ import NavBar from "./components/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
+import NotFound from "./components/NotFound";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                             path="/wine/:itemId"
                             element={<ItemDetailContainer />}
                         />
+                        <Route path="*" element={<NotFound />} />
                     </Routes>
                 </main>
             </BrowserRouter>
