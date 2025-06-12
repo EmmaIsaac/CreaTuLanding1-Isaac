@@ -2,7 +2,7 @@ const wines = [
     {
         id: 1,
         name: "Tempranillo Estate",
-        image: "https://www.bodegasescondidas.com.ar/wp-content/uploads/2022/01/Berrinche-Tempranillo-de-Finca.JPG-510x510.png",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/672/non_2x/transparent-dark-wine-bottle-with-blank-label-and-burgundy-foil-capsule-seal-png.png",
         description:
             "Un vino tinto elaborado con Tempranillo, conocido por su sabor y aroma equilibrados.",
         category: "tinto",
@@ -15,7 +15,7 @@ const wines = [
     {
         id: 2,
         name: "Merlot Select",
-        image: "https://http2.mlstatic.com/D_NQ_NP_660066-MLA77188302268_072024-O.webp",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/672/non_2x/transparent-dark-wine-bottle-with-blank-label-and-burgundy-foil-capsule-seal-png.png",
         description:
             "Un vino tinto elaborado con Merlot, conocido por su sabor y aroma equilibrados.",
         category: "tinto",
@@ -28,7 +28,7 @@ const wines = [
     {
         id: 3,
         name: "Merlot Reserve",
-        image: "https://i0.wp.com/trescumbres.wine/wp-content/uploads/2020/08/lg-merlot-reserva.jpg?fit=1000%2C1000&ssl=1",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/672/non_2x/transparent-dark-wine-bottle-with-blank-label-and-burgundy-foil-capsule-seal-png.png",
         description:
             "Un vino tinto elaborado con Merlot, conocido por su sabor y aroma equilibrados.",
         category: "tinto",
@@ -41,7 +41,7 @@ const wines = [
     {
         id: 4,
         name: "Cabernet Sauvignon Reserve",
-        image: "https://lasperdicesar.vtexassets.com/arquivos/ids/155792-800-800?v=638810113141070000&width=800&height=800&aspect=true",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/672/non_2x/transparent-dark-wine-bottle-with-blank-label-and-burgundy-foil-capsule-seal-png.png",
         description:
             "Un vino tinto elaborado con Cabernet Sauvignon, conocido por su sabor y aroma equilibrados.",
         category: "tinto",
@@ -54,7 +54,7 @@ const wines = [
     {
         id: 5,
         name: "Cabernet Sauvignon Estate",
-        image: "https://tienda.aldosvinoteca.com/cdn/shop/files/casarena_estate_cabernet_sauvig_r_copia_1_69492dbc-5f0c-4a45-8c9a-20adae0bc847.jpg?v=1718129350",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/672/non_2x/transparent-dark-wine-bottle-with-blank-label-and-burgundy-foil-capsule-seal-png.png",
         description:
             "Un vino tinto elaborado con Cabernet Sauvignon, conocido por su sabor y aroma equilibrados.",
         category: "tinto",
@@ -67,7 +67,7 @@ const wines = [
     {
         id: 6,
         name: "Cabernet Sauvignon Select",
-        image: "https://winesupply.vtexassets.com/arquivos/ids/157137-800-auto?v=637746648362900000&width=800&height=auto&aspect=true",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/672/non_2x/transparent-dark-wine-bottle-with-blank-label-and-burgundy-foil-capsule-seal-png.png",
         description:
             "Un vino tinto elaborado con Cabernet Sauvignon, conocido por su sabor y aroma equilibrados.",
         category: "tinto",
@@ -80,7 +80,7 @@ const wines = [
     {
         id: 7,
         name: "Merlot Estate",
-        image: "https://tienda.aldosvinoteca.com/cdn/shop/files/bianco_canale_53959b75-9bb4-4e81-81cf-5c6023ff4616.jpg?v=1718129821",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/672/non_2x/transparent-dark-wine-bottle-with-blank-label-and-burgundy-foil-capsule-seal-png.png",
         description:
             "Un vino tinto elaborado con Merlot, conocido por su sabor y aroma equilibrados.",
         category: "tinto",
@@ -93,7 +93,7 @@ const wines = [
     {
         id: 8,
         name: "Cabernet Sauvignon Reserve",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=8",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/672/non_2x/transparent-dark-wine-bottle-with-blank-label-and-burgundy-foil-capsule-seal-png.png",
         description:
             "Un vino tinto elaborado con Cabernet Sauvignon, conocido por su sabor y aroma equilibrados.",
         category: "tinto",
@@ -106,7 +106,7 @@ const wines = [
     {
         id: 9,
         name: "Cabernet Sauvignon Classic",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=9",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/672/non_2x/transparent-dark-wine-bottle-with-blank-label-and-burgundy-foil-capsule-seal-png.png",
         description:
             "Un vino tinto elaborado con Cabernet Sauvignon, conocido por su sabor y aroma equilibrados.",
         category: "tinto",
@@ -119,7 +119,7 @@ const wines = [
     {
         id: 10,
         name: "Malbec Select",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=10",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/672/non_2x/transparent-dark-wine-bottle-with-blank-label-and-burgundy-foil-capsule-seal-png.png",
         description:
             "Un vino tinto elaborado con Malbec, conocido por su sabor y aroma equilibrados.",
         category: "tinto",
@@ -132,7 +132,7 @@ const wines = [
     {
         id: 11,
         name: "Sauvignon Blanc Select",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=11",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/594/non_2x/transparent-white-wine-bottle-with-blank-label-and-gold-foil-capsule-seal-png.png",
         description:
             "Un vino blanco elaborado con Sauvignon Blanc, conocido por su sabor y aroma equilibrados.",
         category: "blanco",
@@ -145,7 +145,7 @@ const wines = [
     {
         id: 12,
         name: "Riesling Reserve",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=12",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/594/non_2x/transparent-white-wine-bottle-with-blank-label-and-gold-foil-capsule-seal-png.png",
         description:
             "Un vino blanco elaborado con Riesling, conocido por su sabor y aroma equilibrados.",
         category: "blanco",
@@ -158,7 +158,7 @@ const wines = [
     {
         id: 13,
         name: "Sauvignon Blanc Reserve",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=13",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/594/non_2x/transparent-white-wine-bottle-with-blank-label-and-gold-foil-capsule-seal-png.png",
         description:
             "Un vino blanco elaborado con Sauvignon Blanc, conocido por su sabor y aroma equilibrados.",
         category: "blanco",
@@ -171,7 +171,7 @@ const wines = [
     {
         id: 14,
         name: "Riesling Reserve",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=14",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/594/non_2x/transparent-white-wine-bottle-with-blank-label-and-gold-foil-capsule-seal-png.png",
         description:
             "Un vino blanco elaborado con Riesling, conocido por su sabor y aroma equilibrados.",
         category: "blanco",
@@ -184,7 +184,7 @@ const wines = [
     {
         id: 15,
         name: "Sauvignon Blanc Reserve",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=15",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/594/non_2x/transparent-white-wine-bottle-with-blank-label-and-gold-foil-capsule-seal-png.png",
         description:
             "Un vino blanco elaborado con Sauvignon Blanc, conocido por su sabor y aroma equilibrados.",
         category: "blanco",
@@ -197,7 +197,7 @@ const wines = [
     {
         id: 16,
         name: "Chardonnay Vintage",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=16",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/594/non_2x/transparent-white-wine-bottle-with-blank-label-and-gold-foil-capsule-seal-png.png",
         description:
             "Un vino blanco elaborado con Chardonnay, conocido por su sabor y aroma equilibrados.",
         category: "blanco",
@@ -210,7 +210,7 @@ const wines = [
     {
         id: 17,
         name: "Chardonnay Classic",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=17",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/594/non_2x/transparent-white-wine-bottle-with-blank-label-and-gold-foil-capsule-seal-png.png",
         description:
             "Un vino blanco elaborado con Chardonnay, conocido por su sabor y aroma equilibrados.",
         category: "blanco",
@@ -223,7 +223,7 @@ const wines = [
     {
         id: 18,
         name: "Sauvignon Blanc Estate",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=18",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/594/non_2x/transparent-white-wine-bottle-with-blank-label-and-gold-foil-capsule-seal-png.png",
         description:
             "Un vino blanco elaborado con Sauvignon Blanc, conocido por su sabor y aroma equilibrados.",
         category: "blanco",
@@ -236,7 +236,7 @@ const wines = [
     {
         id: 19,
         name: "Pinot Grigio Reserve",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=19",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/594/non_2x/transparent-white-wine-bottle-with-blank-label-and-gold-foil-capsule-seal-png.png",
         description:
             "Un vino blanco elaborado con Pinot Grigio, conocido por su sabor y aroma equilibrados.",
         category: "blanco",
@@ -249,7 +249,7 @@ const wines = [
     {
         id: 20,
         name: "Viognier Vintage",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=20",
+        image: "https://static.vecteezy.com/system/resources/previews/016/475/594/non_2x/transparent-white-wine-bottle-with-blank-label-and-gold-foil-capsule-seal-png.png",
         description:
             "Un vino blanco elaborado con Viognier, conocido por su sabor y aroma equilibrados.",
         category: "blanco",
@@ -262,7 +262,7 @@ const wines = [
     {
         id: 21,
         name: "Champagne Vintage",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=21",
+        image: "https://static.vecteezy.com/system/resources/previews/049/949/580/non_2x/elegant-sparkling-wine-bottle-displayed-on-a-table-cut-out-transparent-png.png",
         description:
             "Un vino espumoso elaborado con Champagne, conocido por su sabor y aroma equilibrados.",
         category: "espumante",
@@ -275,7 +275,7 @@ const wines = [
     {
         id: 22,
         name: "Prosecco Vintage",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=22",
+        image: "https://static.vecteezy.com/system/resources/previews/049/949/580/non_2x/elegant-sparkling-wine-bottle-displayed-on-a-table-cut-out-transparent-png.png",
         description:
             "Un vino espumoso elaborado con Prosecco, conocido por su sabor y aroma equilibrados.",
         category: "espumante",
@@ -288,7 +288,7 @@ const wines = [
     {
         id: 23,
         name: "Cava Vintage",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=23",
+        image: "https://static.vecteezy.com/system/resources/previews/049/949/580/non_2x/elegant-sparkling-wine-bottle-displayed-on-a-table-cut-out-transparent-png.png",
         description:
             "Un vino espumoso elaborado con Cava, conocido por su sabor y aroma equilibrados.",
         category: "espumante",
@@ -300,21 +300,21 @@ const wines = [
     },
     {
         id: 24,
-        name: "Sparkling Ros\u00e9 Vintage",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=24",
+        name: "Sparkling Rosé Vintage",
+        image: "https://static.vecteezy.com/system/resources/previews/049/949/580/non_2x/elegant-sparkling-wine-bottle-displayed-on-a-table-cut-out-transparent-png.png",
         description:
-            "Un vino espumoso elaborado con Sparkling Ros\u00e9, conocido por su sabor y aroma equilibrados.",
+            "Un vino espumoso elaborado con Sparkling Rosé, conocido por su sabor y aroma equilibrados.",
         category: "espumante",
         year: 2012,
         winery: "Beringer",
         country: "Spain",
-        grape: "Sparkling Ros\u00e9",
+        grape: "Sparkling Rosé",
         price: 35,
     },
     {
         id: 25,
         name: "Prosecco Classic",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=25",
+        image: "https://static.vecteezy.com/system/resources/previews/049/949/580/non_2x/elegant-sparkling-wine-bottle-displayed-on-a-table-cut-out-transparent-png.png",
         description:
             "Un vino espumoso elaborado con Prosecco, conocido por su sabor y aroma equilibrados.",
         category: "espumante",
@@ -327,7 +327,7 @@ const wines = [
     {
         id: 26,
         name: "Franciacorta Vintage",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=26",
+        image: "https://static.vecteezy.com/system/resources/previews/049/949/580/non_2x/elegant-sparkling-wine-bottle-displayed-on-a-table-cut-out-transparent-png.png",
         description:
             "Un vino espumoso elaborado con Franciacorta, conocido por su sabor y aroma equilibrados.",
         category: "espumante",
@@ -340,7 +340,7 @@ const wines = [
     {
         id: 27,
         name: "Cava Estate",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=27",
+        image: "https://static.vecteezy.com/system/resources/previews/049/949/580/non_2x/elegant-sparkling-wine-bottle-displayed-on-a-table-cut-out-transparent-png.png",
         description:
             "Un vino espumoso elaborado con Cava, conocido por su sabor y aroma equilibrados.",
         category: "espumante",
@@ -353,7 +353,7 @@ const wines = [
     {
         id: 28,
         name: "Champagne Classic",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=28",
+        image: "https://static.vecteezy.com/system/resources/previews/049/949/580/non_2x/elegant-sparkling-wine-bottle-displayed-on-a-table-cut-out-transparent-png.png",
         description:
             "Un vino espumoso elaborado con Champagne, conocido por su sabor y aroma equilibrados.",
         category: "espumante",
@@ -366,7 +366,7 @@ const wines = [
     {
         id: 29,
         name: "Prosecco Estate",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=29",
+        image: "https://static.vecteezy.com/system/resources/previews/049/949/580/non_2x/elegant-sparkling-wine-bottle-displayed-on-a-table-cut-out-transparent-png.png",
         description:
             "Un vino espumoso elaborado con Prosecco, conocido por su sabor y aroma equilibrados.",
         category: "espumante",
@@ -379,7 +379,7 @@ const wines = [
     {
         id: 30,
         name: "Champagne Reserve",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=30",
+        image: "https://static.vecteezy.com/system/resources/previews/049/949/580/non_2x/elegant-sparkling-wine-bottle-displayed-on-a-table-cut-out-transparent-png.png",
         description:
             "Un vino espumoso elaborado con Champagne, conocido por su sabor y aroma equilibrados.",
         category: "espumante",
@@ -392,7 +392,7 @@ const wines = [
     {
         id: 31,
         name: "Rosé Estate",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=31",
+        image: "https://static.vecteezy.com/system/resources/previews/039/658/409/non_2x/ai-generated-rose-wine-bottle-with-blank-label-mockup-free-png.png",
         description:
             "Un vino rosado fresco y vibrante, perfecto para las tardes de verano.",
         category: "rosado",
@@ -405,7 +405,7 @@ const wines = [
     {
         id: 32,
         name: "Pink Pinot",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=32",
+        image: "https://static.vecteezy.com/system/resources/previews/039/658/409/non_2x/ai-generated-rose-wine-bottle-with-blank-label-mockup-free-png.png",
         description:
             "Un rosado delicado con notas de frutilla y pétalos de rosa.",
         category: "rosado",
@@ -418,7 +418,7 @@ const wines = [
     {
         id: 33,
         name: "Blush Rosé",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=33",
+        image: "https://static.vecteezy.com/system/resources/previews/039/658/409/non_2x/ai-generated-rose-wine-bottle-with-blank-label-mockup-free-png.png",
         description: "Un rosado ligero y afrutado, equilibrado y refrescante.",
         category: "rosado",
         year: 2020,
@@ -430,7 +430,7 @@ const wines = [
     {
         id: 34,
         name: "Sunset Rosé",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=34",
+        image: "https://static.vecteezy.com/system/resources/previews/039/658/409/non_2x/ai-generated-rose-wine-bottle-with-blank-label-mockup-free-png.png",
         description:
             "Un rosado brillante y aromático con notas cítricas y de bayas.",
         category: "rosado",
@@ -443,7 +443,7 @@ const wines = [
     {
         id: 35,
         name: "Rosé Reserve",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=35",
+        image: "https://static.vecteezy.com/system/resources/previews/039/658/409/non_2x/ai-generated-rose-wine-bottle-with-blank-label-mockup-free-png.png",
         description: "Un rosado elegante con aroma floral y un final fresco.",
         category: "rosado",
         year: 2021,
@@ -455,7 +455,7 @@ const wines = [
     {
         id: 36,
         name: "Garden Rosé",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=36",
+        image: "https://static.vecteezy.com/system/resources/previews/039/658/409/non_2x/ai-generated-rose-wine-bottle-with-blank-label-mockup-free-png.png",
         description:
             "Un rosado fresco y jugoso, ideal para reuniones al aire libre.",
         category: "rosado",
@@ -468,7 +468,7 @@ const wines = [
     {
         id: 37,
         name: "Berry Rosé",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=37",
+        image: "https://static.vecteezy.com/system/resources/previews/039/658/409/non_2x/ai-generated-rose-wine-bottle-with-blank-label-mockup-free-png.png",
         description: "Rosado con intensos sabores a bayas y un final suave.",
         category: "rosado",
         year: 2020,
@@ -480,7 +480,7 @@ const wines = [
     {
         id: 38,
         name: "Classic Rosé",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=38",
+        image: "https://static.vecteezy.com/system/resources/previews/039/658/409/non_2x/ai-generated-rose-wine-bottle-with-blank-label-mockup-free-png.png",
         description:
             "Un rosado seco clásico con acidez equilibrada y notas frutales.",
         category: "rosado",
@@ -493,7 +493,7 @@ const wines = [
     {
         id: 39,
         name: "Rosé Vintage",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=39",
+        image: "https://static.vecteezy.com/system/resources/previews/039/658/409/non_2x/ai-generated-rose-wine-bottle-with-blank-label-mockup-free-png.png",
         description: "Rosado añejo con aromas delicados y sabor refrescante.",
         category: "rosado",
         year: 2017,
@@ -505,7 +505,7 @@ const wines = [
     {
         id: 40,
         name: "Summer Rosé",
-        image: "https://images.unsplash.com/photo-1600180758890-bb2d8c8919e3?ixid=40",
+        image: "https://static.vecteezy.com/system/resources/previews/039/658/409/non_2x/ai-generated-rose-wine-bottle-with-blank-label-mockup-free-png.png",
         description:
             "Rosado ligero, perfecto para días de verano con notas de sandía.",
         category: "rosado",

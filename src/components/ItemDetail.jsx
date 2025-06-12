@@ -43,17 +43,18 @@ function ItemDetail({ item }) {
             </div>
 
             {/* Columna de imagen */}
-            <div>
+            <div className="flex justify-center items-center">
                 {item.image ? (
                     <img
                         src={item.image}
                         alt={item.name}
-                        className="w-full h-auto rounded-2xl shadow-lg"
+                        className="w-full max-w-xs h-72 object-contain rounded-2xl shadow-lg"
                     />
                 ) : (
                     "No hay imagen disponible"
                 )}
             </div>
+
             <ItemCount precio={item.price} />
         </div>
     );
