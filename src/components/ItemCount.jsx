@@ -9,7 +9,7 @@ const ItemCount = ({ precio }) => {
     };
 
     const total = count * precio;
-
+    // Función que sumula manejar el evento de agregar al carrito
     const handleAddToCart = () => {
         if (count > 0) {
             console.log(

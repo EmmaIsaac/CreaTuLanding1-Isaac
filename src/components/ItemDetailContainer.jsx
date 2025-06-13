@@ -23,7 +23,7 @@ function ItemDetailContainer() {
             new Promise((resolve) => {
                 setTimeout(() => {
                     resolve(wines);
-                }, 1000);
+                }, 1000); // Sumula delay de la api
             });
 
         getProducts()

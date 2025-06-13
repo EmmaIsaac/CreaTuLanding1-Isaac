@@ -10,7 +10,7 @@ function ItemListContainer() {
     const { categoryName } = useParams();
 
     const uniqueCategories = [...new Set(wines.map((wine) => wine.category))];
-
+    // Verifica si la categoría es válida
     const isCategoryValid =
         !categoryName || uniqueCategories.includes(categoryName.toLowerCase());
 
@@ -21,7 +21,7 @@ function ItemListContainer() {
             new Promise((resolve) => {
                 setTimeout(() => {
                     resolve(wines);
-                }, 1000);
+                }, 1000); //Simula un delay de la API
             });
 
         getProducts()
