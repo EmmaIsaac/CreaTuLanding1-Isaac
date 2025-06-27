@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import { getProducts } from "../firebase/db";
 import ItemList from "./ItemList";
 import NotFound from "./NotFound";
 import wines from "../winesData";
@@ -17,13 +18,14 @@ function ItemListContainer() {
     useEffect(() => {
         setLoading(true);
 
-        const getProducts = () =>
-            new Promise((resolve) => {
-                setTimeout(() => {
-                    resolve(wines);
-                }, 1000); //Simula un delay de la API
-            });
+        // const getProducts = () =>
+        //     new Promise((resolve) => {
+        //         setTimeout(() => {
+        //             resolve(wines);
+        //         }, 1000); //Simula un delay de la API
+        //     });
 
+        // getProducts()
         getProducts()
             .then((data) => {
                 if (categoryName) {
@@ -36,6 +38,18 @@ function ItemListContainer() {
                 }
             })
             .finally(() => setLoading(false));
+
+        //     .then((data) => {
+        //         if (categoryName) {
+        //             const filtered = data.filter(
+        //                 (wine) => wine.category === categoryName
+        //             );
+        //             setItems(filtered);
+        //         } else {
+        //             setItems(data);
+        //         }
+        //     })
+        //     .finally(() => setLoading(false));
     }, [categoryName]);
 
     if (!isCategoryValid) {
