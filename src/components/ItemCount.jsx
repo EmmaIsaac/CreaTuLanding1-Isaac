@@ -1,23 +1,21 @@
 import { useState } from "react";
 
 const ItemCount = ({ precio }) => {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(1);
 
     const increment = () => setCount(count + 1);
     const decrement = () => {
-        if (count > 0) setCount(count - 1);
+        if (count > 1) setCount(count - 1);
     };
 
     const total = count * precio;
     // Función que sumula manejar el evento de agregar al carrito
     const handleAddToCart = () => {
-        if (count > 0) {
-            console.log(
-                `Agregado al carrito: ${count} unidades a $ ${precio} c/a. Total: $ ${total.toFixed(
-                    2
-                )}`
-            );
-        }
+        console.log(
+            `Agregado al carrito: ${count} unidades a $ ${precio} c/a. Total: $ ${total.toFixed(
+                2
+            )}`
+        );
     };
 
     return (
@@ -46,7 +44,6 @@ const ItemCount = ({ precio }) => {
             <button
                 type="button"
                 onClick={handleAddToCart}
-                disabled={count === 0}
                 className="px-6 py-3 bg-red-900 text-white rounded-2xl transition 
              hover:bg-gray-700 
              disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed"

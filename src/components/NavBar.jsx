@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import CartWidget from "./CartWidget";
+import { getCategories } from "../firebase/db";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import wines from "../winesData";
 
 function NavBar() {
+    const [categories, setCategories] = useState([]);
     const [menuOpen, setMenuOpen] = useState(false);
-    const uniqueCategories = [...new Set(wines.map((wine) => wine.category))];
+
+    useEffect(() => {
+        getCategories().then((data) => {
+            setCategories(data);
+        });
+    }, []);
 
     return (
         <header className="bg-white shadow-lg">
@@ -18,7 +24,7 @@ function NavBar() {
 
                 {/* Categorías en pantallas grandes */}
                 <div className="hidden md:flex space-x-6">
-                    {uniqueCategories.map((category) => (
+                    {categories.map((category) => (
                         <Link
                             key={category}
                             to={`/category/${category}`}
@@ -43,9 +49,15 @@ function NavBar() {
             </nav>
 
             {/* Menú mobile desplegable */}
-            {menuOpen && (
-                <div className="md:hidden bg-gray-200 px-4 py-4 flex flex-col items-center space-y-3 shadow-md">
-                    {uniqueCategories.map((category) => (
+            <div
+                className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-gray-200 shadow-md ${
+                    menuOpen
+                        ? "max-h-96 opacity-100 py-4"
+                        : "max-h-0 opacity-0 py-0"
+                }`}
+            >
+                <div className="flex flex-col items-center space-y-3">
+                    {categories.map((category) => (
                         <Link
                             key={category}
                             to={`/category/${category}`}
@@ -57,7 +69,7 @@ function NavBar() {
                         </Link>
                     ))}
                 </div>
-            )}
+            </div>
         </header>
     );
 }

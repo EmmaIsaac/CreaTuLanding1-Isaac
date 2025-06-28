@@ -2,11 +2,7 @@ import ItemCount from "./ItemCount";
 
 function ItemDetail({ item }) {
     if (!item) {
-        return (
-            <div className="text-center py-10 text-gray-500">
-                Cargando producto...
-            </div>
-        );
+        return null;
     }
 
     return (
