@@ -23,8 +23,8 @@ function CartProvider({ children }) {
     };
 
     //eliminar un producto del carrito
-    const removeFromCart = (id) => {
-        const updatedCart = cart.filter((prod) => prod.id !== id);
+    const removeFromCart = (item) => {
+        const updatedCart = cart.filter((prod) => prod.id !== item.id);
         setCart(updatedCart);
     };
 
@@ -34,8 +34,18 @@ function CartProvider({ children }) {
         const count = countArray.reduce((acc, current) => acc + current, 0);
         return count;
     };
+
+    const getTotal = () => {
+        const total = cart.reduce(
+            (acc, prod) => acc + prod.price * prod.count,
+            0
+        );
+        return total;
+    };
     return (
-        <CartContext.Provider value={{ cart, addToCart, getCount }}>
+        <CartContext.Provider
+            value={{ cart, addToCart, getCount, getTotal, removeFromCart }}
+        >
             {children}
         </CartContext.Provider>
     );

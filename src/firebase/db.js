@@ -6,6 +6,7 @@ import {
     where,
     doc,
     getDoc,
+    addDoc,
 } from "firebase/firestore";
 import { app } from "./config";
 
@@ -67,4 +68,6 @@ export const getCategories = async () => {
     return Array.from(categories);
 };
 
-// 2h 18min
+export const createOrder = async (order) => {
+    await addDoc(collection(db, "orders"), order);
+};

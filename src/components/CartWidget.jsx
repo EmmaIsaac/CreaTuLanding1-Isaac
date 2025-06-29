@@ -11,7 +11,7 @@ function CartWidget() {
     return (
         <div className="flex items-center ml-4">
             <Link
-                to={""}
+                to={"/cart"}
                 className="bg-red-900 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors duration-300"
             >
                 {count} <FontAwesomeIcon icon={faShoppingCart} />
