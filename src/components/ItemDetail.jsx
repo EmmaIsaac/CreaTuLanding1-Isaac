@@ -51,7 +51,7 @@ function ItemDetail({ item }) {
                 )}
             </div>
 
-            <ItemCount precio={item.price} />
+            <ItemCount item={item} />
         </div>
     );
 }

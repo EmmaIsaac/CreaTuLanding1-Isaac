@@ -1,21 +1,20 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
-const ItemCount = ({ precio }) => {
+const ItemCount = ({ item }) => {
     const [count, setCount] = useState(1);
+    const { addToCart } = useContext(CartContext);
 
     const increment = () => setCount(count + 1);
     const decrement = () => {
         if (count > 1) setCount(count - 1);
     };
 
-    const total = count * precio;
-    // Función que sumula manejar el evento de agregar al carrito
+    const price = item?.price ?? 0; // usa 0 si item o item.price no existen
+    const total = count * price;
+
     const handleAddToCart = () => {
-        console.log(
-            `Agregado al carrito: ${count} unidades a $ ${precio} c/a. Total: $ ${total.toFixed(
-                2
-            )}`
-        );
+        addToCart({ ...item, count });
     };
 
     return (
