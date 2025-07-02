@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import { createOrder } from "../firebase/db";
 import { serverTimestamp } from "firebase/firestore";
 
-function Checkout() {
+function CheckoutForm() {
     const { cart, getTotal } = useContext(CartContext);
     const total = getTotal();
     const navigate = useNavigate();
@@ -110,4 +110,4 @@ function Checkout() {
     );
 }
 
-export default Checkout;
+export default CheckoutForm;
