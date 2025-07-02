@@ -8,7 +8,7 @@ const ItemCount = ({ item }) => {
     const { addToCart } = useContext(CartContext);
 
     const increment = () => {
-        if (count > 0) setCount(count + 1);
+        if (count > 0 && count < 5 && count < item.stock) setCount(count + 1);
     };
     const decrement = () => {
         if (count > 1) setCount(count - 1);
@@ -71,6 +71,9 @@ const ItemCount = ({ item }) => {
             >
                 Agregar al carrito
             </button>
+            <p className="text-gray-700 italic text-sm">
+                *Limite por compra: 5 u
+            </p>
         </div>
     );
 };

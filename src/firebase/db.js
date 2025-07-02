@@ -7,6 +7,8 @@ import {
     doc,
     getDoc,
     addDoc,
+    writeBatch,
+    serverTimestamp,
 } from "firebase/firestore";
 import { app } from "./config";
 
@@ -68,7 +70,52 @@ export const getCategories = async () => {
     return Array.from(categories);
 };
 
-export const createOrder = async (order) => {
-    const docRef = await addDoc(collection(db, "orders"), order);
-    return docRef.id;
+// export const createOrder = async (order) => {
+//     const docRef = await addDoc(collection(db, "orders"), order);
+//     return docRef.id;
+// };
+
+export const createOrder = async (cart, client, total) => {
+    const batch = writeBatch(db);
+    const outOfStock = [];
+
+    for (const item of cart) {
+        const productRef = doc(db, "wines", item.id);
+        const productSnap = await getDoc(productRef);
+
+        if (!productSnap.exists()) {
+            outOfStock.push({ ...item, reason: "Producto no encontrado" });
+            continue;
+        }
+
+        const productData = productSnap.data();
+        if (productData.stock >= item.count) {
+            batch.update(productRef, {
+                stock: productData.stock - item.count,
+            });
+        } else {
+            outOfStock.push({
+                ...item,
+                available: productData.stock,
+            });
+        }
+    }
+
+    if (outOfStock.length > 0) {
+        return { success: false, outOfStock };
+    }
+
+    const order = {
+        client,
+        products: cart,
+        total,
+        time: serverTimestamp(),
+    };
+
+    const orderRef = doc(collection(db, "orders"));
+    batch.set(orderRef, order);
+
+    await batch.commit();
+
+    return { success: true, orderId: orderRef.id };
 };

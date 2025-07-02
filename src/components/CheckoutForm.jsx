@@ -10,7 +10,7 @@ function CheckoutForm() {
     const total = getTotal();
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const form = e.target;
@@ -18,36 +18,69 @@ function CheckoutForm() {
         const email = form.email.value;
         const phone = form.phone.value;
 
-        createOrder({
-            client: {
-                name,
-                email,
-                phone,
-            },
-            products: cart,
-            total,
-            time: serverTimestamp(),
-        })
-            .then((orderId) => {
-                Swal.fire({
-                    title: "Pedido realizado con éxito",
-                    text: `Orden ID: ${orderId}`,
-                    icon: "success",
-                    confirmButtonColor: "#82181a",
-                    confirmButtonText: "Aceptar",
-                });
-                clearCart();
-                navigate("/");
-            })
-            .catch((error) => {
-                Swal.fire({
-                    title: "Error al realizar el pedido",
-                    text: error.message,
-                    icon: "error",
-                    confirmButtonColor: "#82181a",
-                    confirmButtonText: "Aceptar",
-                });
+        const client = { name, email, phone };
+
+        const result = await createOrder(cart, client, total);
+
+        if (result.success) {
+            Swal.fire({
+                title: "Pedido realizado con éxito",
+                text: `Orden ID: ${result.orderId}`,
+                icon: "success",
+                confirmButtonColor: "#82181a",
+                confirmButtonText: "Aceptar",
             });
+            clearCart();
+            navigate("/");
+        } else {
+            const msg = result.outOfStock
+                .map(
+                    (item) =>
+                        `${item.name} (stock disponible: ${
+                            item.available ?? 0
+                        })`
+                )
+                .join("\n");
+
+            Swal.fire({
+                title: "Stock insuficiente",
+                text: `No hay suficiente stock para:\n${msg}`,
+                icon: "warning",
+                confirmButtonColor: "#82181a",
+                confirmButtonText: "Aceptar",
+            });
+        }
+
+        // createOrder({
+        //     client: {
+        //         name,
+        //         email,
+        //         phone,
+        //     },
+        //     products: cart,
+        //     total,
+        //     time: serverTimestamp(),
+        // })
+        //     .then((orderId) => {
+        //         Swal.fire({
+        //             title: "Pedido realizado con éxito",
+        //             text: `Orden ID: ${orderId}`,
+        //             icon: "success",
+        //             confirmButtonColor: "#82181a",
+        //             confirmButtonText: "Aceptar",
+        //         });
+        //         clearCart();
+        //         navigate("/");
+        //     })
+        //     .catch((error) => {
+        //         Swal.fire({
+        //             title: "Error al realizar el pedido",
+        //             text: error.message,
+        //             icon: "error",
+        //             confirmButtonColor: "#82181a",
+        //             confirmButtonText: "Aceptar",
+        //         });
+        //     });
     };
 
     useEffect(() => {
