@@ -35,6 +35,10 @@ function ItemDetail({ item }) {
                     <li>
                         <strong>Uva:</strong> {item.grape}
                     </li>
+                    <li>
+                        <strong>Stock:</strong>{" "}
+                        {item.stock > 0 ? item.stock : "Sin stock"}
+                    </li>
                 </ul>
             </div>
 
@@ -51,7 +55,7 @@ function ItemDetail({ item }) {
                 )}
             </div>
 
-            <ItemCount item={item} />
+            {item.stock > 0 ? <ItemCount item={item} /> : null}
         </div>
     );
 }

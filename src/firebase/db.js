@@ -69,5 +69,6 @@ export const getCategories = async () => {
 };
 
 export const createOrder = async (order) => {
-    await addDoc(collection(db, "orders"), order);
+    const docRef = await addDoc(collection(db, "orders"), order);
+    return docRef.id;
 };

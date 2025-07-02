@@ -1,9 +1,6 @@
 function CartItem({ prod, removeProductFromCart }) {
     return (
-        <li
-            key={prod.id}
-            className="border border-gray-200 rounded-2xl p-4 shadow-sm hover:shadow-md transition"
-        >
+        <li className="border border-gray-200 rounded-2xl p-4 shadow-sm hover:shadow-md transition">
             <div className="flex items-center justify-between">
                 <div>
                     <h3 className="text-xl font-semibold text-gray-800">

@@ -79,6 +79,7 @@ function Cart() {
                         {cart.map((prod) => (
                             <CartItem
                                 prod={prod}
+                                key={prod.id}
                                 removeProductFromCart={removeProductFromCart}
                             />
                         ))}
