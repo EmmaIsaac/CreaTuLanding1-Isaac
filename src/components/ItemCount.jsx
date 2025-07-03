@@ -4,8 +4,8 @@ import Swal from "sweetalert2";
 
 const ItemCount = ({ item }) => {
     const [count, setCount] = useState(1);
-    const [disabled, setDisabled] = useState(false);
-    const { addToCart } = useContext(CartContext);
+
+    const { addToCart, isInCart } = useContext(CartContext);
 
     const increment = () => {
         if (count > 0 && count < 5 && count < item.stock) setCount(count + 1);
@@ -27,16 +27,16 @@ const ItemCount = ({ item }) => {
         });
     };
 
-    const isDisabled = () => {
-        setDisabled(true);
-    };
-
     const handleAddToCart = () => {
         showAlert();
         addToCart({ ...item, count });
-        isDisabled();
-        setCount(0);
     };
+
+    const isItemInCart = isInCart(item);
+
+    if (isItemInCart) {
+        return null;
+    }
 
     return (
         <div className="flex flex-col items-center gap-4 p-4 border border-gray-200 rounded-2xl shadow-sm w-full max-w-xs">
@@ -64,7 +64,6 @@ const ItemCount = ({ item }) => {
             <button
                 type="button"
                 onClick={handleAddToCart}
-                disabled={disabled}
                 className="px-6 py-3 bg-red-900 text-white rounded-2xl transition 
              hover:bg-gray-700 
              disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed"

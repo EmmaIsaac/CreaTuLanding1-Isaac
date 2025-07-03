@@ -42,6 +42,11 @@ function CartProvider({ children }) {
         );
         return total;
     };
+
+    const isInCart = (item) => {
+        return cart.some((prod) => prod.id === item.id);
+    };
+
     return (
         <CartContext.Provider
             value={{
@@ -51,6 +56,7 @@ function CartProvider({ children }) {
                 getTotal,
                 removeFromCart,
                 clearCart,
+                isInCart,
             }}
         >
             {children}
