@@ -2,7 +2,6 @@ import { useContext, useEffect } from "react";
 import { CartContext } from "../context/CartContext";
 import { useNavigate } from "react-router";
 import { createOrder } from "../firebase/db";
-import { serverTimestamp } from "firebase/firestore";
 import Swal from "sweetalert2";
 
 function CheckoutForm() {
@@ -24,7 +23,7 @@ function CheckoutForm() {
 
         if (result.success) {
             Swal.fire({
-                title: "Pedido realizado con éxito",
+                title: "Compra realizada con éxito",
                 text: `Orden ID: ${result.orderId}`,
                 icon: "success",
                 confirmButtonColor: "#82181a",
@@ -50,37 +49,6 @@ function CheckoutForm() {
                 confirmButtonText: "Aceptar",
             });
         }
-
-        // createOrder({
-        //     client: {
-        //         name,
-        //         email,
-        //         phone,
-        //     },
-        //     products: cart,
-        //     total,
-        //     time: serverTimestamp(),
-        // })
-        //     .then((orderId) => {
-        //         Swal.fire({
-        //             title: "Pedido realizado con éxito",
-        //             text: `Orden ID: ${orderId}`,
-        //             icon: "success",
-        //             confirmButtonColor: "#82181a",
-        //             confirmButtonText: "Aceptar",
-        //         });
-        //         clearCart();
-        //         navigate("/");
-        //     })
-        //     .catch((error) => {
-        //         Swal.fire({
-        //             title: "Error al realizar el pedido",
-        //             text: error.message,
-        //             icon: "error",
-        //             confirmButtonColor: "#82181a",
-        //             confirmButtonText: "Aceptar",
-        //         });
-        //     });
     };
 
     useEffect(() => {
